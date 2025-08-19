@@ -88,11 +88,11 @@ html, body {
 	cursor: pointer;
 }
 
-.hero {
+.layout {
 	display: grid;
-	grid-template-columns: 140px 1fr;
+	grid-template-columns: 280px 1fr;
 	gap: 28px;
-	align-items: center;
+	align-items: start;
 	padding: 44px 0 24px;
 }
 
@@ -120,10 +120,56 @@ html, body {
 	color: var(--muted);
 }
 
-.links {
+.sidebar {
+	position: sticky;
+	top: 96px;
+	align-self: start;
+	border: 1px solid var(--border);
+	background: var(--card);
+	border-radius: 12px;
+	padding: 16px;
+}
+
+.location {
 	display: flex;
-	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	margin: 12px 0 10px 0;
+	color: var(--muted);
+}
+
+.contact-list {
+	display: grid;
+	gap: 8px;
+}
+
+.link-item {
+	display: flex;
+	align-items: center;
 	gap: 10px;
+	padding: 10px 12px;
+	border-radius: 10px;
+	border: 1px solid var(--border);
+	background: var(--bg);
+	color: var(--text);
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.link-item:hover {
+	background: var(--card);
+}
+
+.icon {
+	width: 18px;
+	height: 18px;
+	color: var(--muted);
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
 }
 
 .button {
@@ -174,6 +220,15 @@ html, body {
 @media (min-width: 960px) {
 	.projects-grid {
 		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 800px) {
+	.layout {
+		grid-template-columns: 1fr;
+	}
+	.sidebar {
+		position: static;
 	}
 }
 
