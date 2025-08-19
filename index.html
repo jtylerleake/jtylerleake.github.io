@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>J. Tyler Leake — Portfolio</title>
+	<meta name="description" content="Personal website and portfolio." />
+	<link rel="stylesheet" href="styles.css" />
+	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Ccircle cx='128' cy='128' r='120' fill='%231b1b1f'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='120' fill='%23fff' font-family='Segoe UI, Roboto, Helvetica, Arial, sans-serif'%3EJL%3C/text%3E%3C/svg%3E" />
+</head>
+
+<body data-github-username="jtylerleake">
+	<header class="site-header">
+		<div class="container">
+			<div class="brand">
+				<a href="/" class="site-title">Your Name</a>
+			</div>
+			<button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">🌙</button>
+		</div>
+	</header>
+
+	<main>
+		<section class="hero container">
+			<img class="avatar" src="assets/profile.jpg" alt="Portrait of Your Name" />
+			<div class="intro">
+				<h1>Hi, I'm <span class="highlight">J. Tyler Leake</span>.</h1>
+				<p class="summary">Description Goes Here</p>
+				<div class="links">
+					<a class="button" href="mailto:you@example.com">jtylerleake10@gmail.com</a>
+					<a class="button" href="https://www.linkedin.com/in/jtylerleake" target="_blank" rel="noopener">LinkedIn</a>
+					<a class="button" href="assets/cv.pdf" target="_blank" rel="noopener">CV</a>
+					<a class="button button-ghost" href="https://github.com/jtylerleake" target="_blank" rel="noopener">GitHub</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="projects container">
+			<h2>Projects</h2>
+			<p id="projects-loading">Loading projects…</p>
+			<div id="projects-list" class="projects-grid" aria-live="polite"></div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container">
+			<p>© <span id="year"></span> Your Name. All rights reserved.</p>
+		</div>
+	</footer>
+
+	<script src="script.js"></script>
+</body>
+
+</html>
+
+
