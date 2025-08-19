@@ -7,7 +7,7 @@
 	--accent: #2563eb;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
 	:root {
 		--bg: #0b0b0d;
 		--text: #e5e7eb;
@@ -47,7 +47,7 @@ html, body {
 	color: var(--text);
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 	line-height: 1.6;
-	font-size: 15px;
+	font-size: 14px;
 }
 
 .container {
@@ -98,9 +98,9 @@ html, body {
 }
 
 .avatar {
-	width: 140px;
-	height: 140px;
-	border-radius: 50%;
+	width: 240px;
+	height: 240px;
+	border-radius: 0;
 	object-fit: cover;
 	border: 2px solid var(--border);
 	background: var(--card);
@@ -108,7 +108,14 @@ html, body {
 
 .intro h1 {
 	margin: 0 0 6px 0;
-	font-size: 28px;
+	font-size: 24px;
+	line-height: 1.2;
+}
+
+.main-title {
+	margin: 0 0 8px 0;
+	font-size: 32px;
+	font-weight: 700;
 	line-height: 1.2;
 }
 
@@ -116,9 +123,24 @@ html, body {
 	color: var(--accent);
 }
 
+.sidebar-title {
+	margin: 6px 0 24px 0;
+	font-size: 16px;
+	font-weight: 700;
+}
+
 .summary {
-	margin: 0 0 14px 0;
+	margin: 0 0 8px 0;
 	color: var(--muted);
+}
+
+.summary-section {
+	margin-bottom: 20px;
+}
+
+.summary-section p {
+	margin: 0;
+	line-height: 1.6;
 }
 
 .sidebar {
@@ -128,30 +150,38 @@ html, body {
 	padding: 0;
 }
 
-.location {
+.location, .company {
 	display: flex;
 	align-items: center;
 	gap: 8px;
-	margin: 12px 0 10px 0;
-	color: var(--muted);
+	margin: 8px 0 8px 0;
+	color: #000000;
+	font-size: 13px;
+}
+
+/* Dark mode location and company text */
+.theme-dark .location,
+.theme-dark .company {
+	color: #ffffff;
 }
 
 .contact-list {
 	display: grid;
 	gap: 6px;
+	margin-top: 0;
 }
 
 .link-item {
 	display: inline-flex;
 	align-items: center;
 	gap: 8px;
-	padding: 6px 0;
+	padding: 4px 0;
 	border: none;
 	background: transparent;
 	color: var(--text);
 	text-decoration: none;
 	font-weight: 500;
-	font-size: 14px;
+	font-size: 13px;
 }
 
 .link-item:hover {
@@ -159,9 +189,21 @@ html, body {
 	color: var(--accent);
 }
 
+.link-item.github .icon { color: #000000; }
+.link-item.github:hover .icon { color: #333333; }
+
+/* Dark mode GitHub icon */
+.theme-dark .link-item.github .icon { color: #ffffff; }
+.theme-dark .link-item.github:hover .icon { color: #cccccc; }
+
+.link-item.linkedin .icon { color: #0a66c2; }
+.link-item.linkedin:hover .icon { color: #084482; }
+
+.link-item.email .icon, .link-item.cv .icon { color: var(--muted); }
+
 .icon {
-	width: 16px;
-	height: 16px;
+	width: 14px;
+	height: 14px;
 	color: var(--muted);
 }
 
@@ -250,6 +292,18 @@ html, body {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+
+.project-image-container {
+	margin-bottom: 8px;
+}
+
+.project-image {
+	width: 100%;
+	height: 120px;
+	object-fit: cover;
+	border-radius: 0;
+	border: 1px solid var(--border);
 }
 
 .project-meta {
