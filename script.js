@@ -8,6 +8,13 @@
 	const projectsList = document.getElementById('projects-list');
 	const githubUsername = document.body.getAttribute('data-github-username') || 'your-username';
 
+	// Project image mapping - add your project images here
+	const projectImages = {
+		'racetrack-problem': 'assets/racetrack-car.png',
+		'multilayer-perceptron-experiment': 'assets/neural-network.jpg',
+		// Add more projects as needed: 'repo-name': 'assets/image-name.jpg'
+	};
+
 	function setYear() {
 		if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 	}
@@ -65,6 +72,20 @@
 		repos.forEach(repo => {
 			const card = document.createElement('article');
 			card.className = 'project-card';
+			
+			// Add project image if available
+			if (projectImages[repo.name]) {
+				const imageContainer = document.createElement('div');
+				imageContainer.className = 'project-image-container';
+				const image = document.createElement('img');
+				image.className = 'project-image';
+				image.src = projectImages[repo.name];
+				image.alt = `${repo.name} project image`;
+				image.loading = 'lazy';
+				imageContainer.appendChild(image);
+				card.appendChild(imageContainer);
+			}
+			
 			const title = document.createElement('h3');
 			title.textContent = repo.name;
 			const desc = document.createElement('p');
