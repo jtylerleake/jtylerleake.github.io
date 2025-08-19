@@ -47,6 +47,7 @@
 			const repos = await res.json();
 			const filtered = repos
 				.filter(r => !r.fork && !r.archived)
+				.filter(r => r.name.toLowerCase() !== `${githubUsername.toLowerCase()}.github.io`)
 				.sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at));
 			renderRepos(filtered);
 		} catch (err) {
