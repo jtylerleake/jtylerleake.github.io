@@ -10,9 +10,9 @@
 
 	// Project image mapping - add your project images here
 	const projectImages = {
-		'racetrack-problem': 'assets/racetrack-car.png',
-		'multilayer-perceptron-experiment': 'assets/neural-network.jpg',
-		'modality-informed-metric-learner': 'assets/clustering.jpg',
+		'racetrack-problem'                 : 'assets/racetrack-car.png',
+		'multilayer-perceptron-experiment'  : 'assets/neural-network.jpg',
+		'modality-informed-metric-learner'  : 'assets/modality-data.jpg',
 		// Add more projects as needed: 'repo-name': 'assets/image-name.jpg'
 	};
 
@@ -135,6 +135,7 @@
 
 	if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
 })();
+
 
 
 
