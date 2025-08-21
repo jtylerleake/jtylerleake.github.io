@@ -12,7 +12,7 @@
 	const projectImages = {
 		'racetrack-problem': 'assets/racetrack-car.png',
 		'multilayer-perceptron-experiment': 'assets/neural-network.jpg',
-		'task-adaptive-meta-model': 'assets/clustering.jpg',
+		'modality-informed-metric-learner': 'assets/clustering.jpg',
 		// Add more projects as needed: 'repo-name': 'assets/image-name.jpg'
 	};
 
@@ -135,6 +135,7 @@
 
 	if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
 })();
+
 
 
 
