@@ -151,37 +151,38 @@ html, body {
 }
 
 .location, .company {
-	display: flex;
-	align-items: center;
-	gap: 8px;
-	margin: 8px 0 8px 0;
-	color: #000000;
-	font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0; /* remove extra margins */
+  color: #000000;
+  font-size: 14px;
 }
 
-/* Dark mode location and company text */
 .theme-dark .location,
 .theme-dark .company {
-	color: #ffffff;
+  color: #ffffff;
 }
 
 .contact-list {
-	display: grid;
-	gap: 6px;
-	margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* match spacing with location/company */
+  margin: 0;
+  padding: 0;
 }
 
 .link-item {
-	display: inline-flex;
-	align-items: center;
-	gap: 8px;
-	padding: 4px 0;
-	border: none;
-	background: transparent;
-	color: var(--text);
-	text-decoration: none;
-	font-weight: 500;
-	font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0; /* remove extra padding */
+  border: none;
+  background: transparent;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 .link-item:hover {
@@ -338,6 +339,7 @@ html, body {
 	white-space: nowrap;
 	border: 0;
 }
+
 
 
 
