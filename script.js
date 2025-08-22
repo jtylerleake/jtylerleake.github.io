@@ -10,7 +10,7 @@
 
 	// Project image mapping - add your project images here
 	const projectImages = {
-		'Racetrack-Problem' 				: 'assets/thumbnails/color-racecar-1.jpg',
+		'Racetrack-Reinforcement-Learning' 	: 'assets/thumbnails/color-racecar-1.jpg',
 		'Multilayer-Perceptron-Experiment'  : 'assets/thumbnails/color-mlpexp-1.jpg',
 		'Modality-Informed-Metric-Learner'  : 'assets/thumbnails/color-mimml-1.jpg',
 		'Computer-Vision-Trading-Agents'    : 'assets/thumbnails/color-traders-2.jpg',
@@ -266,6 +266,7 @@
 
 	if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
 })();
+
 
 
 
