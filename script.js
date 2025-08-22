@@ -10,10 +10,10 @@
 
 	// Project image mapping - add your project images here
 	const projectImages = {
-		'Racetrack-Problem' 				: 'assets/thumbnails/color/color-racecar-1.jpg',
-		'Multilayer-Perceptron-Experiment'  : 'assets/thumbnails/color/color-mlpexp-1.jpg',
-		'Modality-Informed-Metric-Learner'  : 'assets/thumbnails/color/color-mimml-1.jpg',
-		'Computer-Vision-Trading-Agents'    : 'assets/thumbnails/light/light-traders-1.jpg',
+		'Racetrack-Problem' 				: 'assets/thumbnails/color-racecar-1.jpg',
+		'Multilayer-Perceptron-Experiment'  : 'assets/thumbnails/color-mlpexp-1.jpg',
+		'Modality-Informed-Metric-Learner'  : 'assets/thumbnails/color-mimml-1.jpg',
+		'Computer-Vision-Trading-Agents'    : 'assets/thumbnails/color-traders-2.jpg',
 	};
 
 	// Language color mapping for the language bars
@@ -266,5 +266,6 @@
 
 	if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
 })();
+
 
 
