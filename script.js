@@ -6,13 +6,18 @@
 	const yearEl = document.getElementById('year');
 	const projectsLoading = document.getElementById('projects-loading');
 	const projectsList = document.getElementById('projects-list');
+	const publicationsList = document.getElementById('publications-list');
+	const summaryContent = document.getElementById('summary-content');
 	const githubUsername = document.body.getAttribute('data-github-username') || 'your-username';
+
+	// Configuration: Set to false to hide publications section
+	const SHOW_PUBLICATIONS = false;
 
 	// Project image mapping - add your project images here
 	const projectImages = {
 		'Racetrack-Reinforcement-Learning' 	: 'assets/thumbnails/color-racecar-1.jpg',
-		'Multilayer-Perceptron-Experiment'  : 'assets/thumbnails/color-mlpexp-1.jpg',
-		'Modality-Informed-Metric-Learner'  : 'assets/thumbnails/color-mimml-1.jpg',
+		'Multilayer-Perceptron-Experiment'  : 'assets/thumbnails/color-mlpexp-4.jpg',
+		'Modality-Informed-Metric-Learner'  : 'assets/thumbnails/color-mimml-6.jpg',
 		'Computer-Vision-Trading-Agents'    : 'assets/thumbnails/color-traders-2.jpg',
 	};
 
@@ -258,15 +263,104 @@
 		projectsList.appendChild(fragment);
 	}
 
+// List of name variations to highlight
+const myNames = ['Tyler Leake', 'J. Tyler Leake', 'James Leake'];
+
+// Function to highlight my name in authors string
+function highlightMyName(authors) {
+	let highlightedAuthors = authors;
+	
+	// Sort names by length (longest first) to avoid partial matches
+	const sortedNames = [...myNames].sort((a, b) => b.length - a.length);
+	
+	sortedNames.forEach(name => {
+		// Create a regex that matches the name as a whole word (case insensitive)
+		const regex = new RegExp(`\\b${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'gi');
+		highlightedAuthors = highlightedAuthors.replace(regex, `<strong>${name}</strong>`);
+	});
+	
+	return highlightedAuthors;
+}
+
+// Load and render summary content
+async function fetchAndRenderSummary() {
+	try {
+		const response = await fetch('assets/summary.txt');
+		if (!response.ok) {
+			throw new Error('Failed to load summary');
+		}
+		const summaryText = await response.text();
+		if (summaryContent) {
+			summaryContent.innerHTML = summaryText;
+		}
+	} catch (error) {
+		console.error('Error loading summary:', error);
+		if (summaryContent) {
+			summaryContent.innerHTML = '<p>Unable to load summary at this time.</p>';
+		}
+	}
+}
+
+// Load and render publications
+async function fetchAndRenderPublications() {
+	// Check if publications should be shown
+	if (!SHOW_PUBLICATIONS) {
+		// Hide the entire publications section
+		const publicationsSection = document.querySelector('.publications');
+		if (publicationsSection) {
+			publicationsSection.style.display = 'none';
+		}
+		return;
+	}
+
+	try {
+		const response = await fetch('publications.json');
+		if (!response.ok) {
+			throw new Error('Failed to load publications');
+		}
+		const publications = await response.json();
+		renderPublications(publications);
+	} catch (error) {
+		console.error('Error loading publications:', error);
+		if (publicationsList) {
+			publicationsList.innerHTML = '<p>Unable to load publications at this time.</p>';
+		}
+	}
+}
+
+	function renderPublications(publications) {
+		if (!publicationsList) return;
+		
+		const fragment = document.createDocumentFragment();
+		
+		publications.forEach(publication => {
+			const publicationEl = document.createElement('div');
+			publicationEl.className = 'publication-item';
+			
+		publicationEl.innerHTML = `
+			<div class="publication-content">
+				<h3 class="publication-title">${publication.title}</h3>
+				<p class="publication-authors">${highlightMyName(publication.authors)}</p>
+				<p class="publication-journal">
+					<a href="${publication.link}" rel="noopener">${publication.journal}</a> (${publication.date})
+				</p>
+			</div>
+		`;
+			
+			fragment.appendChild(publicationEl);
+		});
+		
+		publicationsList.innerHTML = '';
+		publicationsList.appendChild(fragment);
+	}
+
 	document.addEventListener('DOMContentLoaded', () => {
 		setYear();
 		initTheme();
+		fetchAndRenderSummary();
 		fetchAndRenderRepos();
+		fetchAndRenderPublications();
 	});
 
 	if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
 })();
-
-
-
-
