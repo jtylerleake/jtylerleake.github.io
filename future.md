@@ -1,7 +1,7 @@
 
 # Site Update Agenda: 
 
-## Short-Term: 
+### Short-Term: 
 - Adding CV
 - Publications
     - Adding publication PDFs to assets/papers/
@@ -12,11 +12,12 @@
 - Lengthening GitHub repo descriptions
 - Fix the company icon
 
-## Long-Term:
+### Long-Term:
 - Adding tabs at the top of the page (direct to new page OR location in main page)
 - Domain
 
-## Code: 
+### Code: 
 - Global spacing and margin control (classes in styles.css)
 - Refactor to control styling in a centralized way
 - LLM references
+
