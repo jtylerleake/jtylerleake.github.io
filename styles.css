@@ -19,11 +19,11 @@
 }
 
 .theme-light {
-	--bg: #f8f6f2;
-	--text: #1b1b1f;
-	--muted: #6b7280;
-	--card: #f2f0ec;
-	--border: #e6e6e9;
+	--bg: #faf9f6;
+	--text: #1a1a1a;
+	--muted: #888888;
+	--card: #ffffff;
+	--border: #e0e0e0;
 	--accent: #2563eb;
 }
 
@@ -453,3 +453,4 @@ html, body {
 	white-space: nowrap;
 	border: 0;
 }
+
