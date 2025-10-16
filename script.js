@@ -364,5 +364,3 @@ async function fetchAndRenderPublications() {
 
 	if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
 })();
-
-
