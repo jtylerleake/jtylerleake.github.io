@@ -1,79 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Tyler Leake</title>
-	<meta name="description" content="Personal website." />
+	<meta name="description" content="Website">
+	
+	<!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="styles.css" />
-	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Ccircle cx='128' cy='128' r='120' fill='%231b1b1f'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='120' fill='%23fff' font-family='Segoe UI, Roboto, Helvetica, Arial, sans-serif'%3ETL%3C/text%3E%3C/svg%3E" />
+	
+	<!-- Styles -->
+	<link rel="stylesheet" href="styles.css">
+	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Ccircle cx='128' cy='128' r='120' fill='%231b1b1f'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='120' fill='%23fff' font-family='Segoe UI, Roboto, Helvetica, Arial, sans-serif'%3ETL%3C/text%3E%3C/svg%3E">
 </head>
 
 <body data-github-username="jtylerleake">
 	<header class="site-header">
 		<div class="container">
-			<div class="brand">
-			</div>
-			<button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">🌙</button>
+			<div class="brand"></div>
+			<button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" title="Toggle theme"></button>
 		</div>
 	</header>
 
 	<main>
 		<section class="layout container">
+			<!-- Sidebar -->
 			<aside class="sidebar">
-				<img class="avatar" src="assets/profile1.JPEG" alt="Tyler Leake" />
+				<img class="avatar" src="assets/profile-03.jpg" alt="Tyler Leake">
 				<div class="location">
-					<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C8.686 2 6 4.686 6 8c0 4.285 6 14 6 14s6-9.715 6-14c0-3.314-2.686-6-6-6Zm0 8.5A2.5 2.5 0 1 1 12 5a2.5 2.5 0 0 1 0 5Z"/></svg>
+					<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+						<path fill="currentColor" d="M12 2C8.686 2 6 4.686 6 8c0 4.285 6 14 6 14s6-9.715 6-14c0-3.314-2.686-6-6-6Zm0 8.5A2.5 2.5 0 1 1 12 5a2.5 2.5 0 0 1 0 5Z"/>
+					</svg>
 					<span>Baltimore, MD</span>
 				</div>
-		<div class="company">
-			<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 21h18v-2H3v2zm0-4h18v-2H3v2zm0-4h18v-2H3v2zm0-4h18V7H3v2zm0-6v2h18V3H3z"/></svg>
-			<span>Johns Hopkins University</span>
-		</div>
-				<nav class="contact-list">
+				
+				<div class="company">
+					<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+						<path fill="currentColor" d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/>
+					</svg>
+					<span>Johns Hopkins University</span>
+				</div>
+				
+				<nav class="contact-list" aria-label="Contact links">
 					<a class="link-item linkedin" href="https://www.linkedin.com/in/jtylerleake" target="_blank" rel="noopener">
-						<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0h4.8v2.2h.07C13.32 8.9 14.95 8 17.1 8 21.6 8 24 10.86 24 15.3V24h-5v-7.4c0-1.76-.03-4.02-2.45-4.02-2.45 0-2.83 1.91-2.83 3.89V24h-5V8z"/></svg>
+						<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+							<path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0h4.8v2.2h.07C13.32 8.9 14.95 8 17.1 8 21.6 8 24 10.86 24 15.3V24h-5v-7.4c0-1.76-.03-4.02-2.45-4.02-2.45 0-2.83 1.91-2.83 3.89V24h-5V8z"/>
+						</svg>
 						<span>LinkedIn</span>
 					</a>
+					
 					<a class="link-item github" href="https://github.com/jtylerleake" target="_blank" rel="noopener">
-						<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.08 3.29 9.38 7.86 10.9.58.11.79-.25.79-.56v-2.02c-3.2.7-3.87-1.35-3.87-1.35-.53-1.33-1.3-1.68-1.3-1.68-1.06-.73.08-.72.08-.72 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.26 3.4.96.11-.76.41-1.26.75-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.3 1.2-3.12-.12-.29-.52-1.46.11-3.05 0 0 .98-.31 3.22 1.19.94-.26 1.95-.39 2.95-.4 1 0 2.01.14 2.95.4 2.24-1.5 3.22-1.19 3.22-1.19.63 1.59.23 2.76.11 3.05.75.82 1.2 1.86 1.2 3.12 0 4.41-2.69 5.39-5.25 5.67.42.36.8 1.07.8 2.17v3.22c0 .31.2.68.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
+						<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+							<path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.08 3.29 9.38 7.86 10.9.58.11.79-.25.79-.56v-2.02c-3.2.7-3.87-1.35-3.87-1.35-.53-1.33-1.3-1.68-1.3-1.68-1.06-.73.08-.72.08-.72 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.26 3.4.96.11-.76.41-1.26.75-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.3 1.2-3.12-.12-.29-.52-1.46.11-3.05 0 0 .98-.31 3.22 1.19.94-.26 1.95-.39 2.95-.4 1 0 2.01.14 2.95.4 2.24-1.5 3.22-1.19 3.22-1.19.63 1.59.23 2.76.11 3.05.75.82 1.2 1.86 1.2 3.12 0 4.41-2.69 5.39-5.25 5.67.42.36.8 1.07.8 2.17v3.22c0 .31.2.68.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/>
+						</svg>
 						<span>GitHub</span>
 					</a>
+					
 					<a class="link-item cv" href="assets/cv.pdf" target="_blank" rel="noopener">
-						<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+						<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+							<path fill="currentColor" d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+						</svg>
 						<span>CV</span>
 					</a>
+					
 					<a class="link-item email" href="mailto:jtylerleake10@gmail.com" rel="noopener">
-						<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path fill="none" stroke="currentColor" stroke-width="2" d="M22 6L12 13 2 6"/></svg>
+						<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+							<path fill="none" stroke="currentColor" stroke-width="2" d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+							<path fill="none" stroke="currentColor" stroke-width="2" d="M22 6L12 13 2 6"/>
+						</svg>
 						<span>Email</span>
 					</a>
 				</nav>
 			</aside>
+			
+			<!-- Main Content -->
 			<div class="content">
-				<div class="intro">
-					<h1 class="main-title">Tyler Leake </h1> <!-- 👋 --> 
-					<p class="summary">
-
-						<!-- Summary Caption -->
-						Recent CS graduate student
-
-					</p>
+				<section class="intro">
+					<h1 class="main-title">Tyler Leake</h1>
+					<p class="summary"> </p> <!---- Summary tag line goes here (currently blank) --> 
 					<div class="summary-section">
-						<p id="summary-content">
-							<!-- Summary content will be loaded here -->
-						</p>
-					</div>
-				</div>
-				<section class="publications">
-					<h2>Publications</h2>
-					<div id="publications-list" class="publications-list">
-						<!-- Publications will be added here -->
+						<p id="summary-content"></p>
 					</div>
 				</section>
+				
+				<section class="publications">
+					<h2>Publications</h2>
+					<div id="publications-list" class="publications-list"></div>
+				</section>
+				
 				<section class="projects">
 					<h2>Recent Projects</h2>
 					<p id="projects-loading">Loading projects…</p>
@@ -91,6 +107,4 @@
 
 	<script src="script.js"></script>
 </body>
-
 </html>
-
